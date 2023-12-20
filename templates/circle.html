@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div id="map" style="height: 500px;"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([{{ coordinates.lat }}, {{ coordinates.lng }}], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        var circle = L.circle([{{ coordinates.lat }}, {{ coordinates.lng }}], {
+            color: 'green',
+            fillColor: 'green',
+            fillOpacity: 0.5,
+            radius: {{ radius * 1000 }}
+        }).addTo(map);
+    </script>
+</body>
+</html>

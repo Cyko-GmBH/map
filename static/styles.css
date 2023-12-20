@@ -1,0 +1,138 @@
+/* Add or update these styles in your existing CSS file */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#map {
+    height: 100%;
+}
+
+#floating-form {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Keep it on the right side */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above the map */
+}
+
+#floating-list {
+    position: fixed;
+    top: 110px;
+    right: 20px; /* Also on the right side */
+    max-height: 80%;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above the map */
+}
+
+#floating-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#floating-list li {
+    margin-bottom: 10px;
+}
+
+#floating-list a {
+    margin-left: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+#floating-list button,
+#floating-form button,
+#floating-list a {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for links */
+}
+
+#floating-list button:hover,
+#floating-form button:hover,
+#floating-list a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+#floating-form input {
+    width: 25%;
+    padding: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add or update these styles in your existing CSS file */
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.login-container li {
+    margin-bottom: 10px;
+    color: red; /* Danger message color */
+}
+
+.login-container li.success {
+    color: green; /* Success message color */
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
