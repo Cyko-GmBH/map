@@ -43,14 +43,16 @@
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        {% for entry in entries %}
-            L.circle([{{ entry.latitude }}, {{ entry.longitude }}], {
-                color: 'green',
-                fillColor: 'green',
-                fillOpacity: 0.5,
-                radius: {{ entry.radius * 1000 }}
-            }).addTo(map);
-        {% endfor %}
+
+
+    {% for entry in entries %}
+        L.circle([{{ entry.latitude }}, {{ entry.longitude }}], {
+            color: 'green',
+            fillColor: 'green',
+            fillOpacity: 0.5,
+            radius: {{ entry.radius * 1000 }}
+        }).addTo(map);
+    {% endfor %}
     </script>
 </body>
 </html>
